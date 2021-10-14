@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './ContextTest.css';
 import { Button } from 'react-bootstrap';
 
@@ -24,9 +23,5 @@ class ThemedButton extends React.Component {
     return <Button theme={this.context}>Button</Button>;
   }
 }
-
-ContextTest.propTypes = {};
-
-ContextTest.defaultProps = {};
 
 export default ContextTest;

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './HooksTestComponent.css';
 
-const HooksTest = (props) => {
+const HooksTest = () => {
   const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
 
-  useEffect(()=>{
+  useEffect(() => {
     document.title = `You clicked ${count} times`;
   }, [count]);
 

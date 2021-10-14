@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './ForwardingRefs.css';
 
 const ForwardingRefs = React.forwardRef((props, ref) => (
@@ -7,9 +6,5 @@ const ForwardingRefs = React.forwardRef((props, ref) => (
     {props.children}
   </button>
 ));
-
-ForwardingRefs.propTypes = {};
-
-ForwardingRefs.defaultProps = {};
 
 export default ForwardingRefs;
