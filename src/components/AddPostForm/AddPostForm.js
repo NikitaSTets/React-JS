@@ -17,7 +17,8 @@ const AddPostForm = () => {
     if (title && content) {
       dispatch(postAdded({
         id: nanoid(),
-        title, content
+        title,
+        content
       }))
     }
   }

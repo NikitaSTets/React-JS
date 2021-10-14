@@ -13,10 +13,11 @@ import HooksTest from './components/HooksTestComponent/HooksTestComponent'
 import ReduxTest from './components/ReduxTest/ReduxTest';
 import PostsList from './components/PostsList/PostsList';
 import AddPostForm from './components/AddPostForm/AddPostForm';
+import ClassComponentRedux from './components/ClassComponentRedux/ClassComponentRedux';
 
-// You can now get a ref directly to the DOM button:
 ReactDOM.render(
 	<Provider store={store}>
+		<ClassComponentRedux />
 		<PostsList />
 		<AddPostForm />
 		<ReduxTest />
