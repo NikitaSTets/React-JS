@@ -8,7 +8,6 @@ const HooksTest = () => {
     document.title = `You clicked ${count} times`;
   }, [count]);
 
-
   return (
     <div>
       <p>You clicked {count} times</p>
@@ -18,7 +17,5 @@ const HooksTest = () => {
     </div>
   );
 }
-
-HooksTest.defaultProps = {};
 
 export default HooksTest;
