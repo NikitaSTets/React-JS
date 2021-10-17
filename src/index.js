@@ -19,7 +19,7 @@ ReactDOM.render(
 		<ClassComponentRedux />
 		<PostsList />
 		<AddPostForm />
-		<ReduxTest />
+		<ReduxTest count="1000" />
 		<HooksTest />
 		<ContextTest />
 		<PropsValidation name="dsa" />

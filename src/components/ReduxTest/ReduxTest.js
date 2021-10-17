@@ -21,13 +21,17 @@ const ReduxTest = (props) => (
   </div>
 );
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+  console.log('mapStateToProps', ownProps);
+
   return {
     count: state.counter.count,
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+  console.log('mapDispatchToProps', ownProps);
+
   return {
     increaseCounter: () => dispatch(increaseCounter()),
     decreaseCounter: () => dispatch(decreaseCounter()),
@@ -35,4 +39,10 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ReduxTest);
+const mergeProps = (stateProps, dispatchProps, ownProps) => ({
+  ...ownProps,
+  ...stateProps,
+  ...dispatchProps,
+})
+
+export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(ReduxTest);
